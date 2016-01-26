@@ -11,6 +11,8 @@ Therefore, whenever it may not be a normal operation, if problems occur, please 
 
 ## Usage
 
+### tvcast.search
+
 ```javascript
 var tvcast = require('./')
 
@@ -40,11 +42,36 @@ tvcast.search({
     //...
 ```
 
-### sort
+#### sort
 
 * `date`
 * `rel`
 
+
+### tvcast.load
+
+```javascript
+tvcast.list(['top50'], function (err, result) {
+  console.log(err, JSON.stringify(result))
+})
+
+```
+```javascript
+{
+  "top50": [
+    {
+      "url": "http://tvcast.naver.com/v/711374",
+      "title": "180도 돌변해버린 두 얼굴의 여자친구 3",
+      "thumb_url": "http://tvcast2.phinf.naver.net/20160125_188/tCScQ_1453733440496SylUu_JPEG/6AP5sBCg4dkq.jpg?type=f236_133",
+      "duration": 3423
+    },
+    // ...
+    ]
+}
+```
+#### targets
+
+* `top50`
 
 ## LICENSE
 

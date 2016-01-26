@@ -7,3 +7,7 @@ tvcast.search({
 }, function (err, result) {
   console.log(err, JSON.stringify(result))
 })
+
+tvcast.list(['top50'], function (err, result) {
+  console.log(err, JSON.stringify(result))
+})
